@@ -145,7 +145,7 @@ abstract contract ImmutableERC721Base is
         address from,
         address to,
         uint256 tokenId
-    ) internal override(ImmutableERC721RoyaltyEnforced, ERC721) {
+    ) internal virtual override(ImmutableERC721RoyaltyEnforced, ERC721) {
         super._transfer(from, to, tokenId);
     }
 
@@ -155,7 +155,7 @@ abstract contract ImmutableERC721Base is
         address to,
         uint256 tokenId,
         uint256 batchSize
-    ) internal override(ERC721, ERC721Enumerable) {
+    ) internal virtual override(ERC721, ERC721Enumerable) {
         super._beforeTokenTransfer(from, to, tokenId, batchSize);
     }
 
